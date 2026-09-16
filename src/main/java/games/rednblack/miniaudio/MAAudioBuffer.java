@@ -51,7 +51,7 @@ public class MAAudioBuffer extends MADataSource {
     }
 
     /**
-     * Get the length of the buffer in PCM frames.
+     * Get the length of the buffer in float samples (PCM frames multiplied by the channel count).
      *
      * @return max length of the buffer
      */

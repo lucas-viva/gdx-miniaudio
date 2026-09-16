@@ -2149,7 +2149,7 @@ public class MiniAudio implements Disposable {
      */
     public MAAudioBuffer createAudioBuffer(int size, int channels) {
         long dataBuffer = jniCreateDataBuffer(size, channels);
-        return new MAAudioBuffer(jniCreateAudioBuffer(dataBuffer, size, channels), dataBuffer, size, this);
+        return new MAAudioBuffer(jniCreateAudioBuffer(dataBuffer, size, channels), dataBuffer, size * channels, this);
     }
 
     private native long jniCreateDataBuffer(int size, int channels);/*
